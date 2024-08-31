@@ -11,8 +11,7 @@ Email ID:pk9598@srmist.edu.in
 
 Team Member 2:
 Name:Pranay Sharma
-Reg No:RA2211028010078  
-Email ID: ps3536@srmist.edu.in
+Reg No:RA2211028010067  Email ID: ps3536@srmist.edu.in
 
 Team Member 3: Anay Purohit
 Name:Anay Purohit
