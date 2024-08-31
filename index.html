@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Flagged Content</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="instagram-logo.png" alt="Instagram" class="insta-logo">
+        <div class="wallet">
+            <i class="fas fa-wallet"></i>
+            <span>Crypto Wallet</span>
+            <button class="wallet-button" onclick="openWalletDialog()">View Wallet</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Example of multiple flagged posts -->
+        <div class="post">
+            <div class="post-header">
+                <img src="w.png" alt="User Avatar" class="avatar">
+                <div class="username">username123</div>
+            </div>
+            <img src="wallpaper.png" alt="Flagged Content" class="post-image">
+            <div class="post-footer">
+                <div class="voting">
+                    <button class="vote-btn in" onclick="vote('in')">✔ In</button>
+                    <button class="vote-btn out" onclick="vote('out')">✘ Out</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="post-header">
+                <img src="psps.png" alt="User Avatar" class="avatar">
+                <div class="username">username456</div>
+            </div>
+            <img src="ceo.png" alt="Flagged Content" class="post-image">
+            <div class="post-footer">
+                <div class="voting">
+                    <button class="vote-btn in" onclick="vote('in')">✔ In</button>
+                    <button class="vote-btn out" onclick="vote('out')">✘ Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <button class="nav-btn active" data-nav="home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </button>
+        <button class="nav-btn" data-nav="reels">
+            <i class="fas fa-video"></i>
+            <span>Reels</span>
+        </button>
+        <button class="nav-btn" data-nav="chat">
+            <i class="fas fa-comments"></i>
+            <span>Chat</span>
+        </button>
+        <button class="nav-btn" data-nav="flagged">
+            <i class="fas fa-flag" style="color: red;"></i>
+            <span>Flagged</span>
+        </button>
+    </div>
+
+    <!-- Modal for Crypto Wallet Information -->
+    <div id="wallet-dialog" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeWalletDialog()">&times;</span>
+            <h2>Crypto Wallet Info</h2>
+            <p id="wallet-id">Wallet ID: ABC123XYZ</p>
+            <p id="wallet-balance">Balance: $100</p>
+            <button class="wallet-button" onclick="generateRandomInfo()">Redeem</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
