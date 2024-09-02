@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Profile Page</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- Navbar -->
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px; background-color: #fff; border-bottom: 1px solid #dbdbdb;">
+        <a href="./normal.html">
+            <img src="instagram-logo.png" alt="Instagram" style="height: 40px;">
+        </a>
+        <div style="display: flex; align-items: center;">
+            <input type="text" placeholder="Search" style="padding: 5px; border-radius: 5px; border: 1px solid #dbdbdb; margin-right: 20px;">
+            <i class="fas fa-wallet" style="margin-right: 5px;"></i>
+            <!-- <span>Crypto Wallet</span> -->
+            <button style="padding: 5px 10px; margin-left: 10px; border: none; border-radius: 5px; background-color: #3897f0; color: #fff; cursor: pointer;" onclick="openWalletDialog()">View Wallet</button>
+            <button onclick="window.location.href='../login/index.html'">Log out</button>
+        </div>
+    </div>
+
+    <!-- Profile Header -->
+    <div style="padding: 20px; display: flex; align-items: center;">
+        <img src="user-avatar.jpg" alt="User Avatar" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px;">
+        <div>
+            <h2 style="margin: 0; font-size: 24px;">Anushka</h2>
+            <p style="margin: 5px 0;">Bio: Developer, Photographer, Traveler</p>
+            <button style="padding: 5px 15px; border: 1px solid #dbdbdb; border-radius: 5px; background-color: #fff; cursor: pointer;">Edit Profile</button>
+        </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div style="display: flex; justify-content: space-around; border-top: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb; padding: 10px 0;">
+        <div style="text-align: center;">
+            <h3 style="margin: 0;">150</h3>
+            <span>Posts</span>
+        </div>
+        <div style="text-align: center;">
+            <h3 style="margin: 0;">500</h3>
+            <span>Followers</span>
+        </div>
+        <div style="text-align: center;">
+            <h3 style="margin: 0;">200</h3>
+            <span>Following</span>
+        </div>
+    </div>
+
+    <!-- Highlight Stories Section -->
+    <div style="display: flex; justify-content: space-around; padding: 20px 0;">
+        <div style="text-align: center;">
+            <img src="highlight1.jpg" alt="Highlight 1" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+            <span style="display: block; margin-top: 5px;">Travel</span>
+        </div>
+        <div style="text-align: center;">
+            <img src="highlight2.jpg" alt="Highlight 2" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+            <span style="display: block; margin-top: 5px;">Food</span>
+        </div>
+        <!-- Add more highlights as needed -->
+    </div>
+
+    <!-- Posts Section -->
+    <div style="display: flex; flex-wrap: wrap; gap: 5px; padding: 10px;">
+        <div style="width: 32%;">
+            <img src="post1.jpg" alt="Post 1" style="width: 100%; object-fit: cover;">
+        </div>
+        <div style="width: 32%;">
+            <img src="post2.jpg" alt="Post 2" style="width: 100%; object-fit: cover;">
+        </div>
+        <div style="width: 32%;">
+            <img src="post3.jpg" alt="Post 3" style="width: 100%; object-fit: cover;">
+        </div>
+        <!-- Add more posts as needed -->
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div style="position: fixed; bottom: 0; width: 100%; display: flex; justify-content: space-around; background-color: #fff; border-top: 1px solid #dbdbdb; padding: 10px 0;">
+        <a href="./home.html">
+            <button style="background: none; border: none; cursor: pointer;">
+                <i class="fas fa-user" style="font-size: 20px;"></i>
+                <span>Profile</span>
+            </button>
+        </a>
+        <button style="background: none; border: none; cursor: pointer;">
+            <i class="fas fa-video" style="font-size: 20px;"></i>
+            <span>Reels</span>
+        </button>
+        <button style="background: none; border: none; cursor: pointer;">
+            <i class="fas fa-comments" style="font-size: 20px;"></i>
+            <span>Chat</span>
+        </button>
+        <a href="./index.html">
+        <button style="background: none; border: none; cursor: pointer;">
+            <i class="fas fa-flag" style="font-size: 20px; color: red;"></i>
+            <span>Flagged</span>
+        </button>
+        </a>
+    </div>
+
+    <!-- Modal for Crypto Wallet Information -->
+    <div id="wallet-dialog" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); align-items: center; justify-content: center;">
+        <div style="background-color: #fff; padding: 20px; border-radius: 10px; width: 300px; text-align: center;">
+            <span style="float: right; cursor: pointer;" onclick="closeWalletDialog()">&times;</span>
+            <h2>Crypto Wallet Info</h2>
+            <p id="wallet-id">Wallet ID: ABC123XYZ</p>
+            <p id="wallet-balance">Balance: $100</p>
+            <button style="padding: 5px 10px; border: none; border-radius: 5px; background-color: #3897f0; color: #fff; cursor: pointer;" onclick="generateRandomInfo()">Redeem</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 10px; background-color: #f9f9f9; border-top: 1px solid #dbdbdb; margin-top: 20px;">
+        <a href="#" style="margin-right: 10px;">Privacy Policy</a>
+        <a href="#" style="margin-right: 10px;">Terms of Service</a>
+        <a href="#">Help</a>
+    </footer>
+
+    <script>
+        // JavaScript for Wallet Dialog
+        function openWalletDialog() {
+            document.getElementById('wallet-dialog').style.display = 'flex';
+        }
+
+        function closeWalletDialog() {
+            document.getElementById('wallet-dialog').style.display = 'none';
+        }
+
+        function generateRandomInfo() {
+            alert("Feature not implemented yet!");
+        }
+    </script>
+</body>
+
+</html>
