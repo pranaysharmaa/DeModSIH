@@ -10,6 +10,7 @@ function vote(type) {
         alert('You voted Out! Transaction is being processed.');
         updateWalletBalance(5);
     }
+createblock();
 }
 
 // Update Wallet Balance
@@ -29,14 +30,21 @@ function closeWalletDialog() {
 }
 
 function generateRandomInfo() {
-    walletBalance +=5;
-    document.getElementById('wallet-id').textContent = `Wallet ID: ${walletId}`;
-    document.getElementById('wallet-balance').textContent = `Balance: $${balance}`;
+  walletBalance += 5;
+  document.getElementById("wallet-id").textContent = `Wallet ID: ${walletId}`;
+  document.getElementById(
+    "wallet-balance"
+  ).textContent = `Balance: $${balance}`;
 }
 
 // Close the modal when clicking outside of it
-window.onclick = function(event) {
-    if (event.target == document.getElementById('wallet-dialog')) {
-        closeWalletDialog();
-    }
+window.onclick = function (event) {
+  if (event.target == document.getElementById("wallet-dialog")) {
+    closeWalletDialog();
+  }
+};
+function createblock() {
+  fetch("http://localhost:8080/vote")
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 }
