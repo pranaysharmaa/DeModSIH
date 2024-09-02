@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Flagged Content</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="./normal.html"><img src="instagram-logo.png" alt="Instagram" class="insta-logo"></a>
+        <div class="wallet">
+            <input type="text" placeholder="Search" style="margin-right: 6em;">
+            <i class="fas fa-wallet"></i>
+            <span>Crypto Wallet</span>
+            <button class="wallet-button" onclick="openWalletDialog()">View Wallet</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Example of multiple flagged posts -->
+        <div class="post">
+            <div class="post-header">
+                <img src="w.png" alt="User Avatar" class="avatar">
+                <div class="username">username123</div>
+            </div>
+            <img src="wallpaper.png" alt="Flagged Content" class="post-image">
+            <div class="post-footer">
+                <div class="post-footer" style="display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #dbdbdb;">
+    <div class="like">
+        <button style="background: none; border: none; cursor: pointer; display: flex; align-items: center;">
+            <i class="fas fa-heart" style="font-size: 20px; color: red; margin-right: 5px;"></i>
+            <span>Like</span>
+        </button>
+    </div>
+    <div class="comment">
+        <button style="background: none; border: none; cursor: pointer; display: flex; align-items: center;">
+            <i class="fas fa-comment" style="font-size: 20px; margin-right: 5px;"></i>
+            <span>Comment</span>
+        </button>
+    </div>
+    <div class="share">
+        <button style="background: none; border: none; cursor: pointer; display: flex; align-items: center;">
+            <i class="fas fa-share" style="font-size: 20px; margin-right: 5px;"></i>
+            <span>Share</span>
+        </button>
+    </div>
+    <div class="save">
+        <button style="background: none; border: none; cursor: pointer; display: flex; align-items: center;">
+            <i class="fas fa-bookmark" style="font-size: 20px; margin-right: 5px;"></i>
+            <span>Save</span>
+        </button>
+    </div>
+</div>
+
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="post-header">
+                <img src="psps.png" alt="User Avatar" class="avatar">
+                <div class="username">username456</div>
+            </div>
+            <img src="ceo.png" alt="Flagged Content" class="post-image">
+            <div class="post-footer">
+                <div class="post-footer" style="display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #dbdbdb;">
+                    <div class="like">
+                        <button style="background: none; border: none; cursor: pointer; display: flex; align-items: center;">
+                            <i class="fas fa-heart" style="font-size: 20px; color: red; margin-right: 5px;"></i>
+                            <span>Like</span>
+                        </button>
+                    </div>
+                    <div class="comment">
+                        <button style="background: none; border: none; cursor: pointer; display: flex; align-items: center;">
+                            <i class="fas fa-comment" style="font-size: 20px; margin-right: 5px;"></i>
+                            <span>Comment</span>
+                        </button>
+                    </div>
+                    <div class="share">
+                        <button style="background: none; border: none; cursor: pointer; display: flex; align-items: center;">
+                            <i class="fas fa-share" style="font-size: 20px; margin-right: 5px;"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                    <div class="save">
+                        <button style="background: none; border: none; cursor: pointer; display: flex; align-items: center;">
+                            <i class="fas fa-bookmark" style="font-size: 20px; margin-right: 5px;"></i>
+                            <span>Save</span>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div style="position: fixed; bottom: 0; width: 100%; display: flex; justify-content: space-around; background-color: #fff; border-top: 1px solid #dbdbdb; padding: 10px 0;">
+        <a href="./home.html">
+            <button style="background: none; border: none; cursor: pointer;">
+                <i class="fas fa-user" style="font-size: 20px;"></i>
+                <span>Profile</span>
+            </button>
+        </a>
+        <button style="background: none; border: none; cursor: pointer;">
+            <i class="fas fa-video" style="font-size: 20px;"></i>
+            <span>Reels</span>
+        </button>
+        <button style="background: none; border: none; cursor: pointer;">
+            <i class="fas fa-comments" style="font-size: 20px;"></i>
+            <span>Chat</span>
+        </button>
+        <a href="./index.html">
+        <button style="background: none; border: none; cursor: pointer;">
+            <i class="fas fa-flag" style="font-size: 20px; color: red;"></i>
+            <span>Flagged</span>
+        </button>
+        </a>
+    </div>
+
+    <!-- Modal for Crypto Wallet Information -->
+    <div id="wallet-dialog" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeWalletDialog()">&times;</span>
+            <h2>Crypto Wallet Info</h2>
+            <p id="wallet-id">Wallet ID: ABC123XYZ</p>
+            <p id="wallet-balance">Balance: $100</p>
+            <button class="wallet-button" onclick="generateRandomInfo()">Redeem</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

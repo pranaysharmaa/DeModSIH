@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login with MetaMask</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <img src="logo.PNG" alt="Instagram">
+    <div class="login-form">
+      <form id="instagram-login" action="../non flagged/normal.html" method="get">
+        <input type="text" id="username" placeholder="Phone number, username, or email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Log In</button>
+      </form>
+
+      <div class="separator">
+        <span>OR</span>
+      </div>
+
+      <a href="../flagged/normal.html"><button id="login-metamask" type="button">Log in with MetaMask</button></a>
+
+      <p class="signup">Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+  </div>
+
+  <script src="metamask.js"></script>
+</body>
+</html>
