@@ -14,45 +14,16 @@
     <div class="navbar">
         <a href="./normal.html"><img src="instagram-logo.png" alt="Instagram" class="insta-logo"></a>
         <div class="wallet">
-            
             <i class="fas fa-wallet"></i>
-            <!-- <span>Crypto Wallet</span> -->
             <button class="wallet-button" onclick="openWalletDialog()">View Wallet</button>
             <!-- Logout Button -->
             <button class="logout-button" onclick="window.location.href='../login/index.html'">Logout</button>
         </div>
     </div>
-    
 
-    <div class="content">
-        <!-- Example of multiple flagged posts -->
-        <div class="post">
-            <div class="post-header">
-                <img src="w.png" alt="User Avatar" class="avatar">
-                <div class="username">username123</div>
-            </div>
-            <img src="wallpaper.png" alt="Flagged Content" class="post-image">
-            <div class="post-footer">
-                <div class="voting">
-                    <button class="vote-btn in" onclick="vote('in')">✔ In</button>
-                    <button class="vote-btn out" onclick="vote('out')">✘ Out</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="post">
-            <div class="post-header">
-                <img src="psps.png" alt="User Avatar" class="avatar">
-                <div class="username">username456</div>
-            </div>
-            <img src="ceo.png" alt="Flagged Content" class="post-image">
-            <div class="post-footer">
-                <div class="voting">
-                    <button class="vote-btn in" onclick="vote('in')">✔ In</button>
-                    <button class="vote-btn out" onclick="vote('out')">✘ Out</button>
-                </div>
-            </div>
-        </div>
+    <div class="content" id="content" style="max-width: 600px; padding: 80px 20px 20px; /* Top padding to avoid navbar */
+    margin: 0 auto">
+        <!-- Posts will be inserted here dynamically -->
     </div>
 
     <div style="position: fixed; bottom: 0; width: 100%; display: flex; justify-content: space-around; background-color: #fff; border-top: 1px solid #dbdbdb; padding: 10px 0;">
@@ -71,10 +42,10 @@
             <span>Chat</span>
         </button>
         <a href="./index.html">
-        <button style="background: none; border: none; cursor: pointer;">
-            <i class="fas fa-flag" style="font-size: 20px; color: red;"></i>
-            <span>Flagged</span>
-        </button>
+            <button style="background: none; border: none; cursor: pointer;">
+                <i class="fas fa-flag" style="font-size: 20px; color: red;"></i>
+                <span>Flagged</span>
+            </button>
         </a>
     </div>
 
